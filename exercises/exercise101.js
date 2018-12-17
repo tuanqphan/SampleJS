@@ -393,7 +393,7 @@ console.log(child.start())
 
 var wildChild = new WildChild()
 var base = new Base()
-base.register(wildChild)
+base.register(base)
 
 
 class StockNotifier {
@@ -452,4 +452,20 @@ function whichOne(classType) {
 }
 
 console.log(whichOne(base))
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
+function getSortedRandomIntArray(min, max, lenght) {
+    var intarray = []
+    for (var each = 0; each < lenght; each++) {
+        intarray.push(getRandomInt(min, max))
+    }
+    return intarray.sort()
+}
+
+console.log(getSortedRandomIntArray(0, 9, 10))
 
