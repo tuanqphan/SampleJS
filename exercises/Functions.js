@@ -109,7 +109,7 @@ class StudentInfor {
 var student = new StudentInfor("James")
 console.log(student.getStudentName())
 
-var {getStudentName} = student
-console.log(getStudentName())
+// var {getStudentName} = student
+// console.log(getStudentName())
 
 //=====================================================
