@@ -17,10 +17,15 @@ Request.prototype = {
  
 var log = (function() {
     var log = "";
+
+    var addList = function(msg) { log += msg + "\n"; };
+    var showList = function() { console.log(log); log = ""; };
  
     return {
-        add: function(msg) { log += msg + "\n"; },
-        show: function() { console.log(log); log = ""; }
+        // add: function(msg) { log += msg + "\n"; },
+        // show: function() { console.log(log); log = ""; }
+        add: addList,
+        show: showList
     }
 })();
  

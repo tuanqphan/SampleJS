@@ -18,7 +18,6 @@ let person = {
     }
 }
 
-
 person.sayHelloToPerson()
 let { name, sayHelloToPerson } = person
 sayHelloToPerson()
@@ -62,6 +61,7 @@ function printAll(...vals) {
     }
 }
 
+printAll([12], [11, 11.2], 10, 9, 8, [7, 7.1])
 printAll(intArray)
 
 intArray.forEach(
@@ -88,7 +88,7 @@ let timeSelf = intArray.map(
 console.log(`timeSelf has the values of ${timeSelf}`)
 
 var reduce = shorten.reduce(
-    (v1, v2) => { return v1 + v2 }
+    (v1, v2) => { return v1 * v2 }
 )
 console.log("Been recuded to " + reduce)
 
@@ -110,7 +110,7 @@ class Worker extends Person {
     }
 
     getInfo() {
-        return `${this.name} has a job as ${this.title}`
+        return `${super.getInfo()} has a job as ${this.title}`
     }
 }
 
@@ -256,9 +256,9 @@ for (let i = 0; i < multiArray.length; i++) {
     }
 }
 
-multiArray.forEach(
+multiArray.reverse().forEach(
     array => {
-        array.forEach(
+        array.reverse().forEach(
             item => {
                 console.log(`React method ${item}`)
             }
