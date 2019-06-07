@@ -39,7 +39,7 @@ var intsarray = [12, 2, 3, 6, 7, 43, 5, 20, 20, 88, 23, 9, 34]
 function sortIntArray(array) {
     for (let each = 0; each < array.length; each++) {
         for (let remaining = each + 1; remaining < array.length; remaining++) {
-            if (array[each] < array[remaining]) {
+            if (array[each] > array[remaining]) {
                 tmp = array[each];
                 array[each] = array[remaining];
                 array[remaining] = tmp;
